@@ -1,5 +1,7 @@
 # JDTE Matrix (Greenhouse Matrix + Tiered Solar Panels)
 
+[![Build](https://github.com/rulanup/JDTE-GreenhouseMatrix/actions/workflows/build.yml/badge.svg)](https://github.com/rulanup/JDTE-GreenhouseMatrix/actions/workflows/build.yml)
+
 The Greenhouse Matrix multiblock structure and the Tiered Solar Panels, extracted from [JDT Extras](https://github.com/) (`jdte`) into their own standalone NeoForge mod.
 
 | Property | Value |
