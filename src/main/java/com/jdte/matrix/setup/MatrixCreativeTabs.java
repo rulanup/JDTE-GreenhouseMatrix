@@ -35,6 +35,9 @@ public class MatrixCreativeTabs {
                 // Upgrade item
                 output.accept(MatrixItems.GREENHOUSE_MATRIX_QUICK_INSTALL_UPGRADE.get());
 
+                // Creative Greenhouse (moved from JDTE)
+                output.accept(MatrixItems.CREATIVE_GREENHOUSE.get());
+
                 // Tiered Solar Panels
                 output.accept(MatrixItems.CONCENTRATED_SOLAR_PANEL.get());
                 output.accept(MatrixItems.SINGULARITY_SOLAR_PANEL.get());

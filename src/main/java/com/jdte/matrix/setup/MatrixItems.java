@@ -26,6 +26,9 @@ public class MatrixItems {
     public static final DeferredHolder<Item, BlockItem> GREENHOUSE_MATRIX_AUTO_CRAFTING = blockItem(
             "greenhouse_matrix_auto_crafting", MatrixBlocks.GREENHOUSE_MATRIX_AUTO_CRAFTING);
 
+    public static final DeferredHolder<Item, BlockItem> CREATIVE_GREENHOUSE = blockItem(
+            "creative_greenhouse", MatrixBlocks.CREATIVE_GREENHOUSE);
+
     // Tiered Solar Panels
     public static final DeferredHolder<Item, BlockItem> CONCENTRATED_SOLAR_PANEL = blockItem(
             "concentrated_solar_panel", MatrixBlocks.CONCENTRATED_SOLAR_PANEL);

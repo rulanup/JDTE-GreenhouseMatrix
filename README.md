@@ -10,7 +10,7 @@ The Greenhouse Matrix multiblock structure and the Tiered Solar Panels, extracte
 | Mod name | `JDTE Matrix` |
 | Minecraft | `1.21.1` |
 | NeoForge | `21.1.216+` |
-| JDT Extras | `0.5.9-alpha4+` |
+| JDT Extras | `0.5.9+` |
 | Just Dire Things | `1.5.7+` |
 | Java | `21` |
 

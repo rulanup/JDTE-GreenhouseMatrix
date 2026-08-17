@@ -1,6 +1,7 @@
 package com.jdte.matrix.setup;
 
 import com.jdte.matrix.JDTEMatrix;
+import com.jdte.matrix.common.blocks.CreativeGreenhouseBlock;
 import com.jdte.matrix.common.blocks.GreenhouseMatrixAutoCraftingBlock;
 import com.jdte.matrix.common.blocks.GreenhouseMatrixCasingBlock;
 import com.jdte.matrix.common.blocks.GreenhouseMatrixControllerBlock;
@@ -29,6 +30,9 @@ public class MatrixBlocks {
     public static final DeferredHolder<Block, GreenhouseMatrixEnhancementBlock> GREENHOUSE_MATRIX_ESSENCE = BLOCKS.register("greenhouse_matrix_essence", () -> new GreenhouseMatrixEnhancementBlock(GreenhouseMatrixEnhancement.ESSENCE_CONVERSION));
     public static final DeferredHolder<Block, GreenhouseMatrixAutoCraftingBlock> GREENHOUSE_MATRIX_AUTO_CRAFTING = BLOCKS.register(
             "greenhouse_matrix_auto_crafting", GreenhouseMatrixAutoCraftingBlock::new);
+
+    public static final DeferredHolder<Block, CreativeGreenhouseBlock> CREATIVE_GREENHOUSE = BLOCKS.register(
+            "creative_greenhouse", CreativeGreenhouseBlock::new);
 
     // Tiered Solar Panels
     public static final DeferredHolder<Block, SolarPanelBlock> CONCENTRATED_SOLAR_PANEL = BLOCKS.register(

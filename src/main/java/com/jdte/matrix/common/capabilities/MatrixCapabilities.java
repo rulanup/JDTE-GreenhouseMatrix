@@ -1,5 +1,6 @@
 package com.jdte.matrix.common.capabilities;
 
+import com.jdte.matrix.common.blockentities.CreativeGreenhouseBE;
 import com.jdte.matrix.common.blockentities.GreenhouseMatrixControllerBE;
 import com.jdte.matrix.common.blockentities.GreenhouseMatrixPortBE;
 import com.jdte.matrix.common.blocks.GreenhouseMatrixPortBlock;
@@ -35,6 +36,9 @@ public final class MatrixCapabilities {
                     ? port.controller().getFluidHandler() : null;
     private static final IBlockCapabilityProvider<IItemHandler, Direction> PORT_ITEMS =
             MatrixCapabilities::getPortItems;
+    private static final IBlockCapabilityProvider<IItemHandler, Direction> CREATIVE_GREENHOUSE_ITEMS =
+            (level, pos, state, be, side) -> be instanceof CreativeGreenhouseBE greenhouse
+                    ? greenhouse.getAutomationItemHandler() : null;
 
     private static IItemHandler getPortItems(net.minecraft.world.level.Level level, BlockPos pos,
                                              net.minecraft.world.level.block.state.BlockState state,
@@ -57,5 +61,6 @@ public final class MatrixCapabilities {
         event.registerBlock(Capabilities.ItemHandler.BLOCK, PORT_ITEMS, itemPorts.toArray(Block[]::new));
         event.registerBlock(Capabilities.FluidHandler.BLOCK, PORT_FLUID, fluidPorts.toArray(Block[]::new));
         event.registerBlock(Capabilities.EnergyStorage.BLOCK, PORT_ENERGY, energyPorts.toArray(Block[]::new));
+        event.registerBlock(Capabilities.ItemHandler.BLOCK, CREATIVE_GREENHOUSE_ITEMS, MatrixBlocks.CREATIVE_GREENHOUSE.get());
     }
 }

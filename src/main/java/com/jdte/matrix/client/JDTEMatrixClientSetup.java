@@ -1,6 +1,7 @@
 package com.jdte.matrix.client;
 
 import com.jdte.matrix.JDTEMatrix;
+import com.jdte.matrix.client.screens.CreativeGreenhouseScreen;
 import com.jdte.matrix.client.screens.GreenhouseMatrixScreen;
 import com.jdte.matrix.setup.MatrixMenus;
 import net.neoforged.api.distmarker.Dist;
@@ -13,5 +14,6 @@ public class JDTEMatrixClientSetup {
     @SubscribeEvent
     public static void registerScreens(RegisterMenuScreensEvent event) {
         event.register(MatrixMenus.GREENHOUSE_MATRIX.get(), GreenhouseMatrixScreen::new);
+        event.register(MatrixMenus.CREATIVE_GREENHOUSE.get(), CreativeGreenhouseScreen::new);
     }
 }

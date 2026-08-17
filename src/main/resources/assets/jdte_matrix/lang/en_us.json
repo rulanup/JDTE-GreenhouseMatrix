@@ -86,5 +86,8 @@
   "jdte_matrix.screen.greenhouse_matrix.size": "Size: %s x %s x %s",
   "jdte_matrix.screen.greenhouse_matrix.speed": "Speed enhancers: %s (+25%% each, max +300%%)",
   "jdte_matrix.screen.greenhouse_matrix.upgrades_queued": "Queued cards: %s",
-  "tooltip.jdte_matrix.greenhouse_matrix_quick_install_upgrade": "Unlocks the controller\u0027s stacked global upgrade queue and installs real cards into managed Greenhouses."
+  "tooltip.jdte_matrix.greenhouse_matrix_quick_install_upgrade": "Unlocks the controller\u0027s stacked global upgrade queue and installs real cards into managed Greenhouses.",
+  "block.jdte_matrix.creative_greenhouse": "Creative Greenhouse",
+  "jdte_matrix.screen.creative_greenhouse.infinite": "Logical amount: %s",
+  "jdte_matrix.screen.creative_greenhouse.overflow": "Output types exceed the limit of %s"
 }

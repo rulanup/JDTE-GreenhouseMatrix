@@ -86,5 +86,8 @@
   "jdte_matrix.screen.greenhouse_matrix.size": "尺寸：%s × %s × %s",
   "jdte_matrix.screen.greenhouse_matrix.speed": "速度增强：%s（每个 +25%%，最高 +300%%）",
   "jdte_matrix.screen.greenhouse_matrix.upgrades_queued": "待安装升级卡：%s",
-  "tooltip.jdte_matrix.greenhouse_matrix_quick_install_upgrade": "解锁控制器的可堆叠全局升级队列，并把实际升级卡安装到受管理的温室中。"
+  "tooltip.jdte_matrix.greenhouse_matrix_quick_install_upgrade": "解锁控制器的可堆叠全局升级队列，并把实际升级卡安装到受管理的温室中。",
+  "block.jdte_matrix.creative_greenhouse": "创造温室大棚",
+  "jdte_matrix.screen.creative_greenhouse.infinite": "逻辑数量：%s",
+  "jdte_matrix.screen.creative_greenhouse.overflow": "产物类型超过 %s 种上限"
 }

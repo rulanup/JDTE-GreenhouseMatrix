@@ -17,12 +17,12 @@ jobs:
         with:
           path: JDTE-GreenhouseMatrix
 
-      # JDTE 是编译依赖：固定检出 v0.5.9-alpha4 tag 从源码构建 jar
+      # JDTE 是编译依赖：固定检出 v0.5.9 tag 从源码构建 jar
       - name: Checkout JDTE (dependency)
         uses: actions/checkout@v7
         with:
           repository: rulanup/JDTE
-          ref: v0.5.9-alpha4
+          ref: v0.5.9
           path: JDTE
 
       - name: Set up JDK 21

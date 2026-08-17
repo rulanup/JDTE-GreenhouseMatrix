@@ -1,6 +1,7 @@
 package com.jdte.matrix.setup;
 
 import com.jdte.matrix.JDTEMatrix;
+import com.jdte.matrix.common.containers.CreativeGreenhouseContainer;
 import com.jdte.matrix.common.containers.GreenhouseMatrixContainer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.MenuType;
@@ -13,4 +14,7 @@ public class MatrixMenus {
 
     public static final DeferredHolder<MenuType<?>, MenuType<GreenhouseMatrixContainer>> GREENHOUSE_MATRIX = MENUS.register(
             "greenhouse_matrix", () -> IMenuTypeExtension.create(GreenhouseMatrixContainer::new));
+
+    public static final DeferredHolder<MenuType<?>, MenuType<CreativeGreenhouseContainer>> CREATIVE_GREENHOUSE = MENUS.register(
+            "creative_greenhouse", () -> IMenuTypeExtension.create(CreativeGreenhouseContainer::new));
 }

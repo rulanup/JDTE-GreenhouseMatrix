@@ -1,6 +1,7 @@
 package com.jdte.matrix.setup;
 
 import com.jdte.matrix.JDTEMatrix;
+import com.jdte.matrix.common.blockentities.CreativeGreenhouseBE;
 import com.jdte.matrix.common.blockentities.GreenhouseMatrixAutoCraftingBE;
 import com.jdte.matrix.common.blockentities.GreenhouseMatrixControllerBE;
 import com.jdte.matrix.common.blockentities.GreenhouseMatrixPortBE;
@@ -22,6 +23,10 @@ public class MatrixBlockEntities {
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<GreenhouseMatrixAutoCraftingBE>> GREENHOUSE_MATRIX_AUTO_CRAFTING = BLOCK_ENTITIES.register(
             "greenhouse_matrix_auto_crafting", () -> BlockEntityType.Builder.of(
                     GreenhouseMatrixAutoCraftingBE::new, MatrixBlocks.GREENHOUSE_MATRIX_AUTO_CRAFTING.get()).build(null));
+
+    public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<CreativeGreenhouseBE>> CREATIVE_GREENHOUSE = BLOCK_ENTITIES.register(
+            "creative_greenhouse", () -> BlockEntityType.Builder.of(
+                    CreativeGreenhouseBE::new, MatrixBlocks.CREATIVE_GREENHOUSE.get()).build(null));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<SolarPanelBE>> SOLAR_PANEL = BLOCK_ENTITIES.register(
             "solar_panel", () -> BlockEntityType.Builder.of(SolarPanelBE::new,
