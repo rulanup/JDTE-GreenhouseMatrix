@@ -1,0 +1,54 @@
+name: Build
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 本仓库检出到子目录，使 ../JDTE 相对路径（dependencies.gradle 的 fileTree）可解析
+      - name: Checkout JDTE Matrix
+        uses: actions/checkout@v4
+        with:
+          path: JDTE-GreenhouseMatrix
+
+      # JDTE 是编译依赖：固定检出 v0.5.9-alpha4 tag 从源码构建 jar
+      - name: Checkout JDTE (dependency)
+        uses: actions/checkout@v4
+        with:
+          repository: rulanup/JDTE
+          ref: v0.5.9-alpha4
+          path: JDTE
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build JDTE jar
+        working-directory: JDTE
+        run: |
+          chmod +x gradlew
+          ./gradlew jar --no-daemon
+
+      - name: Build mod (compile, test, jar)
+        working-directory: JDTE-GreenhouseMatrix
+        run: |
+          chmod +x gradlew
+          ./gradlew build --no-daemon
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: jdte-matrix-jars
+          path: JDTE-GreenhouseMatrix/build/libs/*.jar
+          if-no-files-found: error
