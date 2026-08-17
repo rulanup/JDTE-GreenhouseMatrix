@@ -1,0 +1,38 @@
+dependencies {
+    // ========================================
+    // Core dependencies
+    // ========================================
+
+    // JDT Extras - built jar from the sibling JDTE project.
+    // The Greenhouse Matrix manages JDTE greenhouses, so JDTE is a hard dependency.
+    implementation fileTree("../JDTE/build/libs") { include "jdte-${jdte_mod_version}.jar" }
+
+    // Just Dire Things - JDTE's public API exposes JDT types (BaseMachineBE and friends).
+    compileOnly "curse.maven:just-dire-things-1002348:7463040"
+    testCompileOnly "curse.maven:just-dire-things-1002348:7463040"
+    testRuntimeOnly "curse.maven:just-dire-things-1002348:7463040"
+
+    // ========================================
+    // Cross-mod APIs (compileOnly)
+    // ========================================
+
+    // AE2 - optional encoded-pattern decoding for matrix auto-crafting.
+    compileOnly "org.appliedenergistics:appliedenergistics2:${ae2_version}"
+
+    // Jade - optional matrix status tooltips.
+    compileOnly "maven.modrinth:jade:${jade_version}"
+    testCompileOnly "maven.modrinth:jade:${jade_version}"
+    testRuntimeOnly "maven.modrinth:jade:${jade_version}"
+
+    // ========================================
+    // Tests
+    // ========================================
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Test runtime mirrors JDTE's own unit-test environment so NeoForge can load JDTE's classes.
+    testRuntimeOnly "curse.maven:just-dire-things-1002348:7463040"
+    testRuntimeOnly "maven.modrinth:jade:${jade_version}"
+    testRuntimeOnly "top.theillusivec4.curios:curios-neoforge:${curios_version}"
+}

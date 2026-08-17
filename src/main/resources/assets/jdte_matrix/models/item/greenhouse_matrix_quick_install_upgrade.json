@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "jdte_matrix:item/greenhouse_matrix_quick_install_upgrade"
+  }
+}

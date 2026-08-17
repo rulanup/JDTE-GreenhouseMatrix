@@ -1,0 +1,18 @@
+# Gradle
+.gradle/
+build/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Minecraft dev runs
+runs/
+crash-reports/
+logs/
+
+# OS
+.DS_Store
+Thumbs.db

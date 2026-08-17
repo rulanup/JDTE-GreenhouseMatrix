@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "jdte_matrix:greenhouse_matrix_controller",
+    "jdte_matrix:greenhouse_matrix_casing",
+    "jdte_matrix:greenhouse_matrix_item_input",
+    "jdte_matrix:greenhouse_matrix_item_output",
+    "jdte_matrix:greenhouse_matrix_fluid_input",
+    "jdte_matrix:greenhouse_matrix_energy_input",
+    "jdte_matrix:greenhouse_matrix_speed",
+    "jdte_matrix:greenhouse_matrix_efficiency",
+    "jdte_matrix:greenhouse_matrix_seed",
+    "jdte_matrix:greenhouse_matrix_essence",
+    "jdte_matrix:greenhouse_matrix_auto_crafting",
+    "jdte_matrix:concentrated_solar_panel",
+    "jdte_matrix:singularity_solar_panel",
+    "jdte_matrix:stellar_fusion_solar_panel",
+    "jdte_matrix:dimensional_collapse_solar_panel",
+    "jdte_matrix:creative_solar_panel"
+  ]
+}
